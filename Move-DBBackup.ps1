@@ -2,15 +2,16 @@
 # Stannek GmbH - v.1.0 - 25.07.2022 - E.Sauerbier
 
 #Parameter
-$DestinationBackupPath="\\sitnas3.sit.local\DB-Backup\UPS"
 $DeletionDay = "31" # legt fest ab welchen Dateialter die Backups gelöscht werden
 $ScriptPath = "C:\Skripte\"
 $ScriptName = $MyInvocation.MyCommand.Name
-$TaskName = "UPS DB Backup"
+$TaskName = "DB Backup"
 $BackupStartTime = "7pm"
-$TaskDescription = "Verschieben des DB-Backups auf NAS"
+$TaskDescription = "Verschieben des DB-Backups"
 # Quellpfade festlegen
-$DBBackupPath = "C:\Util\UPS-DBBackup"
+$DBBackupPath = "C:\Pfad zu DB-Sicherung"
+# Zielpfad festlegen
+$DestinationBackupPath="\\zielsystem\backup"
 
 # Assembly für Hinweisboxen laden
 [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
